@@ -17,7 +17,7 @@ body {
     font-family: var(--body-font-family), sans-serif;
     font-size: 0.75rem;
     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
-    /* background-color: var(--green8); */
+    background-color: #c0d7df;
     color: hsl(0, 0%, 20%);
     padding-top: 8rem;
 
@@ -74,7 +74,7 @@ p {
 }
 
 ::selection, .highlight {
-    background: var(--yellow4);
+    background: rgb(234, 101, 159);
 }
 
 strong {
@@ -101,7 +101,7 @@ hr {
 a {
     text-decoration: none;
     font-weight: 600;
-    color: var(--green3);
+    color: #2c76afff;
 }
 
 a:hover {
@@ -149,7 +149,7 @@ svg {
     justify-content: center;
     gap: 1.5rem;
     margin-left: 1.5rem;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 
     & .hero-pic {
         flex-basis: 50%;
@@ -188,8 +188,8 @@ svg {
 
         & .hero-pic img {
             width: auto;
-            height: 80vh;
-            height: calc(100svh - 45px - 75px);
+            height: 50vh;
+            height: calc(70svh - 45px - 75px);
         }
 
         & .hero-bio {
@@ -218,10 +218,15 @@ h1 .emph {
     font-weight: inherit;
 }
 
+.bar-text {
+    font-size: 1em;
+    fill: rgb(201, 227, 249);
+}
+
 .tracker {
     text-align: center;
     margin-top: 2em;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
 
     .current {
         font-size: 2em;
@@ -247,13 +252,16 @@ h1 .emph {
     }
 
     .qr-pic {
-        flex-basis: 50%;
-        align-self: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 1em;
+        row-gap: 1em;
 
         & img {
             display: block;
-            width: 250px;
-            height: auto;
+            width: auto;
+            max-height: 350px;
             object-fit: cover;
         }
     }
