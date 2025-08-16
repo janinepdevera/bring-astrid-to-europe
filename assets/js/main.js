@@ -3,7 +3,14 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Page loaded.")
 });
 
-const currentNumber = 3000;
+const currentNumber = 4000;
+const targetNumber = 50000;
+
+d3.select(".tracker .current")
+    .text("₱" + d3.format(",.0f")(currentNumber));
+
+d3.select(".tracker .target")
+    .text("₱" + d3.format(",.0f")(targetNumber - currentNumber) + " more to " + "₱" + d3.format(",.0f")(targetNumber));
 
 const container = d3.select("#progress-bar");
 
@@ -11,7 +18,7 @@ const dim = { width: 500, height: 30 };
 
 const xScale = d3.scaleLinear()
     .domain([0, 100])
-    .range([0, 700]);
+    .range([0, dim.width]);
 
 const svg = container.append("svg")
     .attr("width", dim.width)
@@ -28,7 +35,7 @@ svg.append("rect")
 svg.append("rect")
     .attr("x", 0)
     .attr("y", 0)
-    .attr("width", xScale(100 * (currentNumber / 50000)))
+    .attr("width", xScale(100 * (currentNumber / targetNumber)))
     .attr("height", dim.height)
     .style("fill", "#2c76afff");
 
