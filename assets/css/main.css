@@ -231,19 +231,37 @@ h1 .emph {
     margin-top: 2em;
     margin-bottom: 3em;
 
-    .current {
+    & .current {
         font-size: 2em;
         font-weight: 700;
     }
 
-    .target {
-        font-size: .8em;
+    & .target {
+        font-size: .9em;
         font-weight: 400;
-        color: var(--gray2);
+        color: var(--gray1);
+    }
+
+    & .timestamp {
+        font-size: .75em;
+        font-weight: 400;
+        color: var(--gray3);
     }
 
     @media (width <= 440px) and (orientation: portrait) {
         margin-top: 1em;
+
+        & .current {
+            font-size: 2.5em;
+        }
+
+        & .target {
+            font-size: 1em;
+        }
+
+        & .timestamp {
+            font-size: .85em;
+        }
     }
 }
 
@@ -269,6 +287,12 @@ h1 .emph {
             width: auto;
             max-height: 350px;
             object-fit: cover;
+        }
+    }
+
+    @media (width <= 440px) and (orientation: portrait) {
+        & .donate-text {
+            font-size: 1.2em;
         }
     }
 }
