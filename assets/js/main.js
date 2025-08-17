@@ -30,7 +30,7 @@ svg.append("rect")
     .attr("y", 0)
     .attr("width", dim.width)
     .attr("height", dim.height)
-    .style("fill", "#EDEDED");
+    .style("fill", "#e1e0e0");
 
 svg.append("rect")
     .attr("x", 0)

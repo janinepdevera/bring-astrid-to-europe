@@ -17,7 +17,7 @@ body {
     font-family: var(--body-font-family), sans-serif;
     font-size: 0.75rem;
     font-size: clamp(0.75rem, 0.65rem + 0.5vw, 1rem);
-    background-color: #c0d7df;
+    background-color: #dbeaef;
     color: hsl(0, 0%, 20%);
     padding-top: 8rem;
 
@@ -114,7 +114,6 @@ svg {
     width: 100%;
 }
 
-
 /*** Body **************************************/
 
 .content-grid {
@@ -149,7 +148,7 @@ svg {
     justify-content: center;
     gap: 1.5rem;
     margin-left: 1.5rem;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 
     & .hero-pic {
         flex-basis: 50%;
@@ -178,14 +177,13 @@ svg {
     }
 
     @media (width <= 440px) and (orientation: portrait) {
-
+        margin-bottom: 1em;
         grid-column: full-width !important;
         flex-direction: column;
         align-items: center;
         gap: 0;
         text-align: center;
         margin-left: 0;
-        margin-bottom: 1em;
 
         & .hero-pic img {
             width: auto;
@@ -199,10 +197,6 @@ svg {
             & p {
                 font-size: 1.2em;
             }
-        }
-
-        & .hero-buttons {
-            justify-content: center;
         }
     }
 }
@@ -228,8 +222,12 @@ h1 .emph {
 
 .tracker {
     text-align: center;
-    margin-top: 2em;
     margin-bottom: 3em;
+
+    background-color: white;
+    padding: 1em;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
 
     & .current {
         font-size: 2em;
@@ -249,7 +247,6 @@ h1 .emph {
     }
 
     @media (width <= 440px) and (orientation: portrait) {
-        margin-top: 1em;
 
         & .current {
             font-size: 2.5em;
@@ -301,4 +298,38 @@ h1 .emph {
     margin-bottom: 5em;
     font-size: .8em;
     text-align: center;
+}
+
+
+.glow-text {
+    /* color: #ff00ff;
+    text-shadow: 0 0 20px hsla(300, 100%, 50%, 0.2), 
+        0 0 20px hsla(300, 100%, 50%, 0.2), 
+            0 0 20px hsla(300, 100%, 50%, 0.2); */
+    color: #ff3399;
+    text-shadow: 0 0 15px hsla(330, 100%, 60%, 0.2), 
+        0 0 15px hsla(330, 100%, 60%, 0.2), 
+        0 0 15px hsla(330, 100%, 60%, 0.2);
+    /* animation: glowColor 1s infinite alternate; */
+}
+
+@keyframes glowColor {
+  0% {
+    color: #ff00ff;
+    text-shadow: 0 0 20px hsla(300, 100%, 50%, 0.2), 
+        0 0 20px hsla(300, 100%, 50%, 0.2), 
+        0 0 20px hsla(300, 100%, 50%, 0.2);
+  }
+  50% {
+    color: #ff3399;
+    text-shadow: 0 0 20px hsla(330, 100%, 60%, 0.2), 
+        0 0 20px hsla(330, 100%, 60%, 0.2), 
+        0 0 20px hsla(330, 100%, 60%, 0.2);
+  }
+  100% {
+    color: #ff00ff;
+    text-shadow: 0 0 20px hsla(300, 100%, 50%, 0.2), 
+        0 0 20px hsla(300, 100%, 50%, 0.2), 
+            0 0 20px hsla(300, 100%, 50%, 0.2);
+  }
 }
