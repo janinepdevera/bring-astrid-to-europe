@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Page loaded.")
 });
 
-const currentNumber = 12200;
+const currentNumber = 12250;
 const targetNumber = 50000;
 
 d3.select(".tracker .current")
@@ -47,5 +47,4 @@ svg.append("g")
     .attr("x", xScale(100 * (currentNumber / 50000)) - 5)
     .attr("y", dim.height / 2)
     .text(d3.format(".0f")(100 * (currentNumber / 50000)) + "%")
-
 
