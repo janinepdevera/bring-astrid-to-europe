@@ -46,6 +46,6 @@ svg.append("g")
     .attr("dominant-baseline", "central")
     .attr("x", xScale(100 * (currentNumber / 50000)) - 5)
     .attr("y", dim.height / 2)
-    .text(100 * (currentNumber / 50000) + "%")
+    .text(d3.format(".0f")(100 * (currentNumber / 50000)) + "%")
 
 
