@@ -4,10 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const currentNumber = 23350;
+const currentPeople = 17;
 const targetNumber = 50000;
 
 d3.select(".tracker .current")
     .text("₱" + d3.format(",.0f")(currentNumber));
+
+d3.select(".tracker .people")
+    .html(`<strong>${d3.format(",.0f")(currentPeople)}</strong> donors`);
 
 d3.select(".tracker .target")
     .text("₱" + d3.format(",.0f")(targetNumber - currentNumber) + " more to " + "₱" + d3.format(",.0f")(targetNumber));

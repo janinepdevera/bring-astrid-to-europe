@@ -232,6 +232,15 @@ h1 .emph {
     & .current {
         font-size: 2em;
         font-weight: 700;
+        margin-top: .5em;
+        line-height: 1;
+    }
+
+    & .people {
+        font-size: .75em;
+        font-weight: 400;
+        color: var(--red1);
+        padding-bottom: .5em;
     }
 
     & .target {
@@ -243,13 +252,19 @@ h1 .emph {
     & .timestamp {
         font-size: .75em;
         font-weight: 400;
-        color: var(--gray3);
+        color: var(--gray4);
     }
 
     @media (width <= 440px) and (orientation: portrait) {
 
         & .current {
             font-size: 2.5em;
+            margin-top: .25em;
+        }
+
+        & .people {
+            font-size: 1em;
+            padding-bottom: .25em;
         }
 
         & .target {
