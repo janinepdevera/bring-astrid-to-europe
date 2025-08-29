@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log("Page loaded.")
 });
 
-const currentNumber = 29050;
-const currentPeople = 21;
+const currentNumber = 29550;
+const currentPeople = 22;
 const targetNumber = 50000;
 
 d3.select(".tracker .current")
